@@ -1,0 +1,17 @@
+{
+    "python.poetryPath": "${env.POETRY_HOME}/bin/poetry",
+    "python.linting.flake8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.sortImports.path": "isort",
+    "python.testing.pytestEnabled": true,
+    "python.terminal.activateEnvironment": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+    },
+    "terminal.integrated.profiles.linux": {
+        "root": {
+            "path": "zsh",
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "root"
+}

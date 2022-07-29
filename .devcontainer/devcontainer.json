@@ -1,0 +1,27 @@
+{
+    "name": "cch Django Template",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    // "dockerComposeFile": [
+    //     "../docker-compose.yml",
+    // ]
+    "remoteEnv": {
+        "POETRY_VIRTUALENVS_PATH": "/root/.cache/pypoetry/virtualenvs"
+    },
+    "customizations": {
+        "vscode":{
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "be5invis.toml",
+                "eamodio.gitlens",
+                "pomber.git-file-history",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+	},
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	]
+}

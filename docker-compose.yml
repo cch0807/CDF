@@ -1,0 +1,25 @@
+version: "3.8"
+x-django-template-common:
+  &template_app_common
+  tty: true
+  volumes:
+    - ./:/app
+    - poetryvolume:${POETRY_CACHE_DIR}/virtualenvs
+  builds:
+    context: ./
+    dockerfile: ./docker/Dockerfile.local
+  environment:
+    - POETRY_VIRTUALENVS_PATH${POETRY_VIRTUALENVS_PATH}
+    - POETRY_CACHE_DIR=${POETRY_CACHE_DIR}
+  depends_on:
+    - db
+    - redis
+
+services:
+  app:
+    <<: *template_app_common
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    command: ["scripts/start_local_app.sh"]
+
+  

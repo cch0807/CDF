@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 99
+paths = ./app
+exclude = 
+    */__init__.py
+ignore = 
+    E712,   # comparison to False should be 'if cond is False or if not cond'
+            # E712 confilcts with sqlalchemy.core where
+    E503,   # Confilct with black
+    E501,   # Confilct with black
+    
